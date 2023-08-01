@@ -16,7 +16,7 @@ app.use(
     credentials: true,
   })
 );
-app.get('/',(req,res)=>{
+app.get('/ssss',(req,res)=>{
   res.json("Hii");
 })
 app.use(express.json());
