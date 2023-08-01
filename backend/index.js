@@ -9,7 +9,13 @@ const port = process.env.PORT;
 const path = require("path");
 const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
-app.use(cors());
+app.use(
+  cors({
+    origin: ['http://localhost:3000'],
+    methods: ['POST', 'PUT', 'DELETE', 'GET'],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
