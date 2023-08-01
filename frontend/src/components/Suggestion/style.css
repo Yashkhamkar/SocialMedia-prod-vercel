@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Story Section Start */
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-wrapper {
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  padding: 10px;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.status-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.status-card {
+  flex: 0 0 auto;
+  width: 80px;
+  max-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.profile-picz {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 3px;
+  background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
+}
+
+.profile-picz img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.username {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* Story Section End */
+
+/* Post Section Start */
+.post {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  margin-top: 20px;
+}
+
+.comment-btn,
+.action-btn {
+  width: 70px;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #c13584;
+  opacity: 0.5;
+}
+/* Post Section End */
+
+/* Sidebar Section Start */
+.right-col {
+  padding: 20px;
+  position: sticky;
+}
+
+.profile-card {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-card .profile-picz {
+  flex: 0 0 auto;
+  padding: 0;
+  background: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.profile-card:first-child .profile-picz {
+  width: 70px;
+  height: 70px;
+}
+
+.profile-card .profile-picz img {
+  border: none;
+}
+
+.profile-card .username {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  text-align: start;
+}
+
+.sub-text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+.action-btn {
+  opacity: 1;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.suggestion-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+@media (max-width: 1100px) {
+  .right-col,
+  .search-box {
+    display: none;
+  }
+  .nav-wrapper,
+  .wrapper {
+    width: 90%;
+  }
+  .wrapper {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-items .icon {
+    margin: 0 5px;
+  }
+  .post-image {
+    height: 300px;
+  }
+}
+/* Sidebar Section End */
+
+/* Edit/ Delete Start */
+[type="button"]:not(:enabled),
+[type="reset"]:not(:enabled),
+[type="submit"]:not(:enabled),
+button:not(:enabled) {
+  cursor: pointer;
+  border: none;
+  /* color: white; */
+  background: white;
+}
+
+.post a::after {
+  content: "";
+  display: none;
+  color: black;
+}
+
+.post i {
+  color: #000;
+}
+/* Edit/Delete End */
